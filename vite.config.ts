@@ -27,6 +27,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 index: "./index.html",
+                video: "./video_youtube.html",
                 ...getMapsScripts(maps),
             },
         },
