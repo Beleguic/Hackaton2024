@@ -28,6 +28,7 @@ export default defineConfig({
             input: {
                 index: "./index.html",
                 video: "./video_youtube.html",
+                score: "./score.html",
                 ...getMapsScripts(maps),
             },
         },
