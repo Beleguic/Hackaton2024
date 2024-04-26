@@ -1,6 +1,8 @@
-# Hackathon 2024 - Olympic Games
+# Hackaton 2024 - Olympic Games
 
 ![map](./map.png)
+
+The Olympic Games project is designed to allow watching the Olympics or any sports event with a community that shares the same interests. Each sport or match has its designated room, and each room is displayed dynamically based on the competition day. This setup ensures that participants can easily find and join the appropriate room for live events, fostering a sense of community and shared enthusiasm for the sports being watched.
 
 ## Contributors
 
