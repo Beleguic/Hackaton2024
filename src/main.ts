@@ -38,11 +38,12 @@ WA.onInit().then(async () => {
 });
 
 function setupPolling() {
+  console.log("Setting up polling for red card events");
   setInterval(async () => {
     try {
       const response = await fetch("http://localhost:3000/check-red-card");
       const data = await response.json();
-      console.log(data);
+
       if (data.redCardActive) {
         playRedCardSound();
         showRedCardLayer();
@@ -60,8 +61,18 @@ function setupPolling() {
 }
 
 function playRedCardSound() {
-  const audio = new Audio("../public/sound/red.mp3");
-  audio.play();
+  const source = "https://cdn.pixabay.com/audio/2023/04/23/audio_65f312a7c6.mp3";
+  var audio = document.createElement("audio");
+  audio.autoplay = true;
+  audio.load();
+  audio.addEventListener(
+      "load",
+      function () {
+        audio.play();
+      },
+      true
+  );
+  audio.src = source;
 }
 
 function showRedCardLayer() {
@@ -72,7 +83,7 @@ function showRedCardLayer() {
 }
 
 function playYellowCardSound() {
-  const audio = new Audio("../public/sound/red.mp3");
+  const audio = new Audio("/sound/red.mp3");
   audio.play();
 }
 
