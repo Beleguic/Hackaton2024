@@ -1,8 +1,6 @@
-# WorkAdventure Map Starter Kit
+# Hackathon 2024 - Olympic Games
 
 ![map](./map.png)
-
-This is a starter kit designed to help you build your own map for [WorkAdventure](https://workadventu.re). Follow the tutorial at [https://workadventu.re/map-building](https://workadventu.re/map-building) to understand how to utilize this starter kit effectively.
 
 ## Contributors
 
