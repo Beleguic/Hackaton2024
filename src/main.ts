@@ -15,7 +15,7 @@ WA.onInit().then(async () => {
       WA.room.showLayer("floors/foot");
       WA.room.hideLayer("floors/floorblue");
       break;
-    case "Formule 1":
+    case "F1":
       WA.room.showLayer("floors/formuleone");
       WA.room.hideLayer("floors/floorblue");
       break;
