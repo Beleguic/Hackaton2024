@@ -2,39 +2,78 @@
 
 ![map](./map.png)
 
-This is a starter kit to help you build your own map for [WorkAdventure](https://workadventu.re).
+This is a starter kit designed to help you build your own map for [WorkAdventure](https://workadventu.re). Follow the tutorial at [https://workadventu.re/map-building](https://workadventu.re/map-building) to understand how to utilize this starter kit effectively.
 
-To understand how to use this starter kit, follow the tutorial at [https://workadventu.re/map-building](https://workadventu.re/map-building).
+## Contributors
 
-## Structure
-* *public*: Static files like PDFs or audio files
-* *src*: Scripts files
-* *tilesets*: All tilesets
-* *map.tmj*: Map file
-* *map.png*: The map thumbnail displayed on the in-game map information
+List of functionalities along with the respective authors:
 
-If you want to use more than one map file, just add the new map file on root or in a folder.
+- **Dynamic corridor size generation**:
+  Thibault Beleguic (@Beleguic)
+- **Dynamic floor change according to the sport**: Thibault Beleguic (@Beleguic)
+- **Dynamic door name generation**:
+  Annaël Moussa (@annaelmoussa)
+- **Dynamic door generation based on the sport of the day**:
+  Annaël Moussa (@annaelmoussa)
+- **Implementation of the API for retrieving sports of the day**:
+  Lotfi Touil (@Lotfi-Touil)
+- **Implementation of dynamic video streaming according to the sport**:
+  Lotfi Touil (@Lotfi-Touil)
+- **Implementation of dynamic scoring according to the sport**:
+  Lotfi Touil (@Lotfi-Touil)
+- **Dynamic display of red and yellow cards**:
+  Annaël Moussa (@annaelmoussa), Thibault Beleguic (@Beleguic)
+- **Implementation of dynamic sound according to the sport**:
+  Annaël Moussa (@annaelmoussa)
+- **Implementation of different instances with the same source map**:
+  Thibault Beleguic (@Beleguic)
 
-we recommend using 500x500 images for the map thumbnails.
+### Developer Team
 
-If you are going to create custom websites to embed in the map, please reference the HTML files in the `input` option in *vite.config.js*.
+- **Annaël Moussa** - Alias: @annaelmoussa
+- **Lotfi Touil** - Alias: @Lotfi-Touil
+- **Thibault Beleguic** - Alias: @Beleguic
+
+## Technical Stack
+
+This project utilizes a stack comprising TypeScript and Node.js for the WorkAdventure map functionality, along with Symfony for the LiveScore API:
+
+- **TypeScript**: For scripting within WorkAdventure maps to manage dynamic behaviors.
+- **Node.js**: Serves as the runtime environment for developing and testing the interactive maps.
+- [**Symfony**](https://github.com/Lotfi-Touil/symfony-livescore): Used for the LiveScore API, managing live score updates, video streaming, and sport of the day.
+
+## Structure of the Project
+
+- **public**: Contains static files like PDFs or audio files.
+- **src**: Contains script files.
+- **tilesets**: Directory for all tilesets.
+- **map.tmj**: The main map file.
+- **map.png**: Thumbnail for the map displayed in-game.
+- **couloir.tmj**: A map with dynamic doors that display and redirect to the correct visionnage map for watching the video.
+- **couloir.png**: Thumbnail for the sample map displayed in-game.
+- **map-visionnage.tmj**: The visionnage map file.
+- **map-visionnage.png**: Thumbnail for the map displayed in-game.
+- [**symfony-livescore**](https://github.com/Lotfi-Touil/symfony-livescore): Contains the Symfony project for the live score API and visionnage streaming and sport of the day.
+
+**Note:** For multiple map files, add new files to the root directory or within a specific folder. We recommend using 500x500 images for map thumbnails.
 
 ## Requirements
 
-Node.js version >=17
+- Node.js version >=17
 
-## Installation
+## Installation and Launch Procedure
 
-With npm installed (comes with [node](https://nodejs.org/en/)), run the following commands into a terminal in the root directory of this project:
+Ensure npm is installed ([node](https://nodejs.org/en/)). Run the following commands in the root directory of this project:
 
 ```shell
 npm install
 npm run dev
 ```
 
-## Test production map
+## Testing the Production Map
 
-You can test the optimized map as it will be in production:
+To test the optimized map as it will appear in production:
+
 ```sh
 npm run build
 npm run prod
@@ -42,14 +81,8 @@ npm run prod
 
 ## Licenses
 
-This project contains multiple licenses as follows:
+This project includes multiple licenses as detailed below:
 
-* [Code license](./LICENSE.code) *(all files except those for other licenses)*
-* [Map license](./LICENSE.map) *(`map.tmj` and the map visual as well)*
-* [Assets license](./LICENSE.assets) *(the files inside the `src/assets/` folder)*
-
-### About third party assets
-
-If you add third party assets in your map, do not forget to:
-1. Credit the author and license with the "tilesetCopyright" property present in the properties of each tilesets in the `map.tmj` file
-2. Add the license text in LICENSE.assets
+- [Code License](./LICENSE.code) - Applies to all files except those covered under other licenses.
+- [Map License](./LICENSE.map) - Covers `map.tmj` and the associated map visual.
+- [Assets License](./LICENSE.assets) - Pertains to files within the `src/assets/` folder.
