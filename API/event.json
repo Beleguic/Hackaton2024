@@ -19,16 +19,16 @@
         "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
       },
       {
-        "event": "Artistic Gymnastics",
-        "area_name": "Artistic_Gymnastics_4",
+        "event": "Formule 1",
+        "area_name": "formule_1",
         "time": "1100-2230",
-        "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
+        "roomUrl": "map-visionnage.tmj#sport=Formule 1"
       },
       {
-          "event": "Artistic Gymnastics",
-        "area_name": "Artistic_Gymnastics_5",
+          "event": "Football",
+        "area_name": "Football",
           "time": "1100-2230",
-          "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
+          "roomUrl": "map-visionnage.tmj#sport=Football"
       },
       {
         "event": "Judo",

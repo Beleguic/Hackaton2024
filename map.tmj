@@ -394,9 +394,9 @@
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4653, 4654, 4655,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4656, 4657, 4658,
-                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4659, 4660, 4661,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4678, 4679, 4680,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4681, 4682, 4683,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4684, 4685, 4686,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -696,25 +696,8 @@
          "name":"floorLayer",
          "objects":[
                 {
-                 "height":98.6666666666666,
+                 "height":98.6667,
                  "id":21,
-                 "name":"to-couloir",
-                 "properties":[
-                        {
-                         "name":"exitUrl",
-                         "type":"string",
-                         "value":"couloir.tmj#from-hall"
-                        }],
-                 "rotation":0,
-                 "type":"area",
-                 "visible":true,
-                 "width":47.3333333333333,
-                 "x":942,
-                 "y":252
-                }, 
-                {
-                 "height":98.6666666666667,
-                 "id":23,
                  "name":"from-couloir",
                  "properties":[
                         {
@@ -725,9 +708,26 @@
                  "rotation":0,
                  "type":"area",
                  "visible":true,
-                 "width":37.3333333333334,
-                 "x":875.833333333333,
-                 "y":253.333333333333
+                 "width":37.3333,
+                 "x":873.33335,
+                 "y":251.66665
+                }, 
+                {
+                 "height":98.6667,
+                 "id":22,
+                 "name":"to-couloir",
+                 "properties":[
+                        {
+                         "name":"exitUrl",
+                         "type":"string",
+                         "value":"couloir.tmj#from-hall"
+                        }],
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":47.3333,
+                 "x":945.33335,
+                 "y":253.66665
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -1002,7 +1002,7 @@
          "y":0
         }],
  "nextlayerid":106,
- "nextobjectid":24,
+ "nextobjectid":23,
  "orientation":"orthogonal",
  "properties":[
         {
@@ -1189,20 +1189,6 @@
          "transparentcolor":"#ff00ff"
         }, 
         {
-         "columns":17,
-         "firstgid":3756,
-         "image":"tilesets\/Room_Builder_free_32x32.png",
-         "imageheight":736,
-         "imagewidth":544,
-         "margin":0,
-         "name":"Room_Builder_free_32x32",
-         "spacing":0,
-         "tilecount":0,
-         "tileheight":32,
-         "tilewidth":32,
-         "transparentcolor":"#ff00ff"
-        }, 
-        {
          "columns":4,
          "firstgid":3756,
          "image":"tilesets\/drapeau-france-jo.png",
@@ -1308,6 +1294,34 @@
          "imagewidth":96,
          "margin":0,
          "name":"fleche-v2",
+         "spacing":0,
+         "tilecount":9,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "columns":4,
+         "firstgid":4662,
+         "image":"tilesets\/fleche-v3.png",
+         "imageheight":128,
+         "imagewidth":128,
+         "margin":0,
+         "name":"fleche-v3",
+         "spacing":0,
+         "tilecount":16,
+         "tileheight":32,
+         "tilewidth":32,
+         "transparentcolor":"#ff00ff"
+        }, 
+        {
+         "columns":3,
+         "firstgid":4678,
+         "image":"tilesets\/fleche-v4.png",
+         "imageheight":96,
+         "imagewidth":96,
+         "margin":0,
+         "name":"fleche-v4",
          "spacing":0,
          "tilecount":9,
          "tileheight":32,
