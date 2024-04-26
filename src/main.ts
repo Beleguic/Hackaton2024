@@ -43,36 +43,37 @@ function setupPolling() {
     // Simulate red or yellow card events
     const randomEvent = Math.random();
     if (randomEvent < 0.5) {
-      playRedCardSound();
+      playCardSound();
       showRedCardLayer();
       console.log("Red card event simulated!");
     } else {
-      playYellowCardSound();
+      playCardSound();
       showYellowCardLayer();
       console.log("Yellow card event simulated!");
     }
   }, 30000); // Trigger every 30 seconds
 }
 
-function playRedCardSound() {
+function playCardSound() {
   const source =
     "https://cdn.pixabay.com/audio/2023/04/23/audio_65f312a7c6.mp3";
-  var audio = new Audio(source);
-  audio.play();
+  var audio = document.createElement("audio");
+  audio.autoplay = true;
+  audio.load();
+  audio.addEventListener(
+    "load",
+    function () {
+      audio.play();
+    },
+    true
+  );
+  audio.src = source;
 }
-
 function showRedCardLayer() {
   WA.room.showLayer("carton/carton-rouge");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-rouge");
   }, 20000); // Show the red card layer for 20 seconds
-}
-
-function playYellowCardSound() {
-  const source =
-    "https://cdn.pixabay.com/audio/2023/04/23/audio_65f312a7c6.mp3"; // Assuming yellow card sound is at this path
-  var audio = new Audio(source);
-  audio.play();
 }
 
 function showYellowCardLayer() {
