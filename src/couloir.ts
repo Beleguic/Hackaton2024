@@ -222,6 +222,7 @@ function createDoorAtPosition(
   });
 
   console.log("Created area for event", areaName);
+  console.log("exitUrl:", event.roomUrl);
   area.setProperty("exitUrl", event.roomUrl);
 
   WA.room.setTiles([

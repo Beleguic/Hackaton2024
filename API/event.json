@@ -4,37 +4,37 @@
         "event": "Artistic Gymnastics",
         "area_name": "Artistic_Gymnastics_1",
         "time": "1100-2230",
-        "roomUrl": "map-visionnage.tmj?o=Artistic_Gymnastics_1"
+        "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
       },
       {
         "event": "Artistic Gymnastics",
         "area_name": "Artistic_Gymnastics_2",
         "time": "1100-2230",
-        "roomUrl": "map-visionnage.tmj?o=Artistic_Gymnastics_2"
+        "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
       },
       {
         "event": "Artistic Gymnastics",
         "area_name": "Artistic_Gymnastics_3",
         "time": "1100-2230",
-        "roomUrl": "map-visionnage.tmj?o=Artistic_Gymnastics_3"
+        "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
       },
       {
         "event": "Artistic Gymnastics",
         "area_name": "Artistic_Gymnastics_4",
         "time": "1100-2230",
-        "roomUrl": "map-visionnage.tmj?o=Artistic_Gymnastics_4"
+        "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
       },
       {
           "event": "Artistic Gymnastics",
         "area_name": "Artistic_Gymnastics_5",
           "time": "1100-2230",
-          "roomUrl": "map-visionnage.tmj?o=Artistic_Gymnastics_5"
+          "roomUrl": "map-visionnage.tmj#sport=Artistic Gymnastics"
       },
       {
         "event": "Judo",
         "area_name": "Judo_1",
         "time": "1000-1400",
-        "roomUrl": "map-visionnage.tmj?o=Judo_1"
+        "roomUrl": "map-visionnage.tmj#sport=Judo"
       }
     ],
     "2024-07-25": [
@@ -42,13 +42,13 @@
         "event": "Boxing",
         "area_name": "Boxing_1",
         "time": "1530-1755",
-        "roomUrl": "map-visionnage.tmj?o=Boxing_1"
+        "roomUrl": "map-visionnage.tmj#sport=Boxing"
       },
       {
         "event": "Judo",
         "area_name": "Judo_1",
         "time": "1000-1400",
-        "roomUrl": "map-visionnage.tmj?o=Judo_1"
+        "roomUrl": "map-visionnage.tmj#sport=Judo"
       }
     ]
   }

@@ -6,6 +6,7 @@
 <body>
 	<div>
 		<h1>Score</h1>
+		<h3 id="sportContainer"></h3>
 		<h3>France - Bresil</h3>
 		<h2>3 - 0</h2>
 	</div>
@@ -37,5 +38,14 @@
 		}
 
 	</style>
+	<script>
+		// Récupérer la partie "search" de l'URL courante
+		const searchParams = new URLSearchParams(window.location.search);
+		console.log("Partie 'search' de l'URL :", searchParams.toString());
+		const hash = searchParams.get('video');
+		let sportContainer = document.getElementById('sportContainer');
+		sportContainer.textContent = hash;
+
+	</script>
 </body>
 </html>
