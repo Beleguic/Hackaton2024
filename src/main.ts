@@ -38,52 +38,40 @@ WA.onInit().then(async () => {
 });
 
 function setupPolling() {
-  console.log("Setting up polling for red card events");
-  setInterval(async () => {
-    try {
-      const response = await fetch("http://localhost:3000/check-red-card");
-      const data = await response.json();
-
-      if (data.redCardActive) {
-        playRedCardSound();
-        showRedCardLayer();
-        console.log("Red card event detected!");
-      }
-      if (data.yellowCardActive) {
-        playYellowCardSound();
-        showYellowCardLayer();
-        console.log("Yellow card event detected!");
-      }
-    } catch (error) {
-      console.error("Failed to fetch card status:", error);
+  console.log("Setting up dynamic event polling for card events");
+  setInterval(() => {
+    // Simulate red or yellow card events
+    const randomEvent = Math.random();
+    if (randomEvent < 0.5) {
+      playRedCardSound();
+      showRedCardLayer();
+      console.log("Red card event simulated!");
+    } else {
+      playYellowCardSound();
+      showYellowCardLayer();
+      console.log("Yellow card event simulated!");
     }
-  }, 30000); // Ajusté à 30 secondes pour moins de charge
+  }, 30000); // Trigger every 30 seconds
 }
 
 function playRedCardSound() {
-  const source = "https://cdn.pixabay.com/audio/2023/04/23/audio_65f312a7c6.mp3";
-  var audio = document.createElement("audio");
-  audio.autoplay = true;
-  audio.load();
-  audio.addEventListener(
-      "load",
-      function () {
-        audio.play();
-      },
-      true
-  );
-  audio.src = source;
+  const source =
+    "https://cdn.pixabay.com/audio/2023/04/23/audio_65f312a7c6.mp3";
+  var audio = new Audio(source);
+  audio.play();
 }
 
 function showRedCardLayer() {
   WA.room.showLayer("carton/carton-rouge");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-rouge");
-  }, 20000);
+  }, 20000); // Show the red card layer for 20 seconds
 }
 
 function playYellowCardSound() {
-  const audio = new Audio("/sound/red.mp3");
+  const source =
+    "https://cdn.pixabay.com/audio/2023/04/23/audio_65f312a7c6.mp3"; // Assuming yellow card sound is at this path
+  var audio = new Audio(source);
   audio.play();
 }
 
@@ -91,5 +79,5 @@ function showYellowCardLayer() {
   WA.room.showLayer("carton/carton-jaune");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-jaune");
-  }, 20000);
+  }, 20000); // Show the yellow card layer for 20 seconds
 }
