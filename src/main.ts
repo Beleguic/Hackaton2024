@@ -40,7 +40,6 @@ WA.onInit().then(async () => {
 function setupPolling() {
   console.log("Setting up dynamic event polling for card events");
   setInterval(() => {
-    // Simulate red or yellow card events
     const randomEvent = Math.random();
     if (randomEvent < 0.5) {
       playCardSound();
@@ -51,7 +50,7 @@ function setupPolling() {
       showYellowCardLayer();
       console.log("Yellow card event simulated!");
     }
-  }, 30000); // Trigger every 30 seconds
+  }, 30000);
 }
 
 function playCardSound() {
@@ -73,12 +72,12 @@ function showRedCardLayer() {
   WA.room.showLayer("carton/carton-rouge");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-rouge");
-  }, 20000); // Show the red card layer for 20 seconds
+  }, 20000);
 }
 
 function showYellowCardLayer() {
   WA.room.showLayer("carton/carton-jaune");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-jaune");
-  }, 20000); // Show the yellow card layer for 20 seconds
+  }, 20000);
 }
