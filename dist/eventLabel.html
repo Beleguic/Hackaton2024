@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Label</title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-family: "Arial", sans-serif;
+        overflow: hidden;
+      }
+
+      #eventName {
+        position: relative;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: bold;
+        color: #39ff14; /* Neon green */
+        width: 600px;
+        animation: scroll-text 10s linear infinite;
+      }
+
+      /* Keyframes for scrolling text */
+      @keyframes scroll-text {
+        0% {
+          left: 100%;
+        }
+        100% {
+          left: -100%;
+        }
+      }
+
+      /* Neon text effect styles */
+      text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14,
+        0 0 40px #39ff14, 0 0 80px #39ff14, 0 0 120px #39ff14;
+    </style>
+  </head>
+  <body>
+    <div id="eventName"></div>
+
+    <script>
+      function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+          results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const eventName = getParameterByName("event");
+        document.getElementById("eventName").textContent =
+          eventName || "No Event Specified";
+      });
+    </script>
+  </body>
+</html>
