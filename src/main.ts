@@ -2,7 +2,6 @@
 
 //import { bootstrapExtra } from "@workadventure/scripting-api-extra";
 
-console.log("Script started successfully");
 
 WA.onInit().then(async () => {
   console.log("Scripting API ready");
@@ -83,3 +82,5 @@ function showYellowCardLayer() {
     WA.room.hideLayer("carton/carton-jaune");
   }, 10000);
 }
+export {};
+// Your existing code follows

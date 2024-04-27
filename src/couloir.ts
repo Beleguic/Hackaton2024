@@ -24,9 +24,6 @@ interface Position {
 }
 
 import { bootstrapExtra } from "@workadventure/scripting-api-extra";
-
-console.log("Script started successfully");
-
 WA.onInit()
   .then(async () => {
     console.log("Scripting API ready");
@@ -285,3 +282,7 @@ function createDoorAtPosition(
     ]);
   });
 }
+
+export {};
+// Your existing code follows
+
