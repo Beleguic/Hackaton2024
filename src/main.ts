@@ -50,7 +50,7 @@ function setupPolling() {
       showYellowCardLayer();
       console.log("Yellow card event simulated!");
     }
-  }, 30000);
+  }, 300000); // 5 minutes
 }
 
 function playCardSound() {
@@ -72,12 +72,12 @@ function showRedCardLayer() {
   WA.room.showLayer("carton/carton-rouge");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-rouge");
-  }, 20000);
+  }, 10000);
 }
 
 function showYellowCardLayer() {
   WA.room.showLayer("carton/carton-jaune");
   setTimeout(() => {
     WA.room.hideLayer("carton/carton-jaune");
-  }, 20000);
+  }, 10000);
 }
