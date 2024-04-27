@@ -8,14 +8,16 @@ WA.onInit().then(async () => {
   console.log("Scripting API ready");
   let sport = WA.room.hashParameters.sport;
   sport = decodeURI(sport);
+  let id_event = WA.room.hashParameters.id;
+  id_event = decodeURI(id_event)
   console.log(sport);
 
   switch (sport) {
-    case "Football":
+    case "football":
       WA.room.showLayer("floors/foot");
       WA.room.hideLayer("floors/floorblue");
       break;
-    case "F1":
+    case "f1":
       WA.room.showLayer("floors/formuleone");
       WA.room.hideLayer("floors/floorblue");
       break;
@@ -27,11 +29,11 @@ WA.onInit().then(async () => {
   }
 
   const website = await WA.room.website.get("video-player");
-  website.url = "video_youtube.html?video=" + sport;
+  website.url = "video_youtube.html?video=" + id_event;
   website.visible = true;
 
   const score = await WA.room.website.get("score-player");
-  score.url = "score.html?video=" + sport;
+  score.url = "score.html?score=" + id_event;
   score.visible = true;
 
   setupPolling();

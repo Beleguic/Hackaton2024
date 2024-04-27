@@ -10,8 +10,10 @@
     // Par exemple, pour obtenir la valeur d'un paramètre spécifique
     const hash = searchParams.get('video');
 
+    let link = "events/streamings/" + hash;
+    flux_video.src = link;
 
-    let flux_video = document.getElementById('flux_video');
+/*    let flux_video = document.getElementById('flux_video');
     if(hash == "Judo"){
         flux_video.src = `https://www.youtube.com/embed/cCksFktki5s?autoplay=1`;
     }
@@ -20,7 +22,6 @@
     }
     else{
         flux_video.src = `https://www.youtube.com/embed/-MSnM6DExxA?autoplay=1`;
-
-    }
+    }*/
 
 </script>

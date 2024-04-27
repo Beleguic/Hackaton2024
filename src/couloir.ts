@@ -12,9 +12,9 @@ interface Layer {
 }
 
 interface Event {
+  event_id: string;
   event: string;
   area_name: string;
-  time: string;
   roomUrl: string;
 }
 
@@ -138,8 +138,11 @@ function selectFarthestPositions(
 
 async function loadEventsForToday(): Promise<Event[]> {
   try {
-    const response = await fetch(
+    /*const response = await fetch(
       "http://localhost:3000/events/" + new Date().toISOString().slice(0, 10)
+    );*/
+    const response = await fetch(
+        "http://localhost:3000/events/today"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch events");
@@ -222,7 +225,7 @@ function createDoorAtPosition(
   });
 
   console.log("Created area for event", areaName);
-  console.log("exitUrl:", event.roomUrl);
+  console.log("exitUrl:", event.roomUrl + "?id=" + event.event_id);
   area.setProperty("exitUrl", event.roomUrl);
 
   WA.room.setTiles([
@@ -248,9 +251,12 @@ function createDoorAtPosition(
     iframeX = mapData.width * 32 - iframeWidth;
   }
 
-  const iframeUrl = `http://localhost:5173/eventLabel.html?event=${encodeURIComponent(
+  /*const iframeUrl = `http://localhost:5173/eventLabel.html?event=${encodeURIComponent(
     event.event
-  )}`;
+  )}`;*/
+  const iframeUrl = `eventLabel.html?event=${encodeURIComponent(
+      event.event
+  )}`
   WA.room.website.create({
     name: `eventNameDisplay_${position.x}_${position.y}`,
     url: iframeUrl,
