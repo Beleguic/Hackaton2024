@@ -5,11 +5,15 @@
 
 WA.onInit().then(async () => {
   console.log("Scripting API ready");
-  let sport = WA.room.hashParameters.sport;
-  sport = decodeURI(sport);
-  let id_event = WA.room.hashParameters.id;
-  id_event = decodeURI(id_event)
+
+  let chaine = WA.room.hashParameters.sport;
+  let parties: string[] = chaine.split("$");
+  console.log(parties);
+  let sport = decodeURI(parties[0]);
+  let id_event = decodeURI(parties[1]);
+
   console.log(sport);
+  console.log(id_event);
 
   switch (sport) {
     case "football":
