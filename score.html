@@ -1,5 +1,7 @@
-<iframe id="flux_video" src="https://www.youtube.com/embed/-MSnM6DExxA?autoplay=1" title="Brazil v France | 1998 FIFA World Cup Final | Full Match" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 100%;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-<script>
+<div class="myIframe">
+    <iframe id="flux_video" src="https://www.youtube.com/embed/-MSnM6DExxA?autoplay=1" title="Brazil v France | 1998 FIFA World Cup Final | Full Match" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 100%;"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<script >
 	// Récupérer la partie "search" de l'URL courante
 	const searchParams = new URLSearchParams(window.location.search);
 
@@ -15,3 +17,32 @@
 	flux_video.src = link;
 
 </script>
+
+<style>
+
+    body{
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        overflow: hidden;
+    }
+
+    .myIframe {
+        position: relative;
+        padding-bottom: 65.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch; /<<--- THIS IS THE KEY/
+    border: solid black 1px;
+    }
+
+    .myIframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+</style>
