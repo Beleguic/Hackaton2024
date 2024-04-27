@@ -142,7 +142,7 @@ async function loadEventsForToday(): Promise<Event[]> {
       "http://localhost:3000/events/" + new Date().toISOString().slice(0, 10)
     );*/
     const response = await fetch(
-        "https://lotfitouil.fr/symfony-livescore/events/today"
+        "https://lotfitouil.fr/events/today"
     );
     if (!response.ok) {
       throw new Error("Failed to fetch events");
